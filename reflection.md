@@ -21,6 +21,7 @@ I used Claude for this project.
 One suggestion that was correct was the reworking of the hints. Just be looking at the code, it is obvious that they are flipped, but in order to test it, I made the change, pushed it, and then tested the game
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
 
+
 ---
 
 ## 3. Debugging and testing your fixes
