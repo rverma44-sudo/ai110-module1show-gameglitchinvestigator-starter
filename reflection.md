@@ -5,15 +5,20 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 ## 1. What was broken when you started?
 
 - What did the game look like the first time you ran it?
+The first time I ran it, the most blatant issue I noticed was that the higher/lower hints gave no indication to the actual direction of the target. If anything they were misleading. Moreover, once you complete the game, despite pressing new game, it doesn't actually let you do a new game, it refreses the number and the attempts, but the actual search function just breaks. 
+
 - List at least two concrete bugs you noticed at the start  
   (for example: "the secret number kept changing" or "the hints were backwards").
-
+Biggest issue is that the hints are backwards, so for someone trying to play the game the way it's meant to be played, it is near impossible to win. 
+The other issue I noticed is that upon finishing the game there is no way to play again unless you reload the whole website, despite there being a button dedicated to a new game 
 ---
 
 ## 2. How did you use AI as a teammate?
 
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
+I used Claude for this project.
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
+One suggestion that was correct was the reworking of the hints. Just be looking at the code, it is obvious that they are flipped, but in order to test it, I made the change, pushed it, and then tested the game
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
 
 ---
