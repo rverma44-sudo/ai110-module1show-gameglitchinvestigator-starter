@@ -80,7 +80,7 @@ difficulty = st.sidebar.selectbox(
 attempt_limit_map = {
     "Easy": 6,
     "Normal": 8,
-    "Hard": 5,
+    "Hard": 12,
 }
 attempt_limit = attempt_limit_map[difficulty]
 
@@ -96,7 +96,7 @@ if "attempts" not in st.session_state:
     st.session_state.attempts = 1
 
 if "score" not in st.session_state:
-    st.session_state.score = 0
+    st.session_state.score = 100
 
 if "status" not in st.session_state:
     st.session_state.status = "playing"
@@ -133,7 +133,10 @@ with col3:
 
 if new_game:
     st.session_state.attempts = 0
-    st.session_state.secret = random.randint(1, 100)
+    st.session_state.secret = random.randint(low, high)
+    st.session_state.status = "playing"
+    st.session_state.history = []
+    st.session_state.score = 100
     st.success("New game started.")
     st.rerun()
 
