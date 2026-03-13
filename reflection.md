@@ -20,25 +20,29 @@ I used Claude for this project.
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
 One suggestion that was correct was the reworking of the hints. Just be looking at the code, it is obvious that they are flipped, but in order to test it, I made the change, pushed it, and then tested the game
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
-
+So one suggest that was misleading was actually while I was fixing that same hints issue. It fixed the go higher go lower as expected, but forgot about the TypeError block which had the old swapped messages. After testing it I went back in and realized something was still wrong, so I then fixed that and retested it, ensuring the code was working as expected.
 
 ---
 
 ## 3. Debugging and testing your fixes
 
 - How did you decide whether a bug was really fixed?
+I decided a bug was fixed by manually testing the game after pushing each change. For the hints bug, I actually played through a few rounds and checked that "go higher" and "go lower" pointed me in the right direction toward the secret number. If the game behavior matched what I expected as a player, I called it fixed. If something still felt off, like when the TypeError block still had the old swapped messages, I went back and dug deeper.
 - Describe at least one test you ran (manual or using pytest)  
   and what it showed you about your code.
+  I ran a manual test in the browser after fixing the hints. I started a game, guessed a number I knew was low, and checked whether the hint told me to go higher — which it now correctly did. This showed me that the core comparison logic was working, but it also revealed that the TypeError message block was still broken since it still gave misleading feedback in edge cases. That test essentially uncovered a second bug hiding inside the first fix.
 - Did AI help you design or understand any tests? How?
-
+AI didn't explicitly tell me to run tests, but it did help me realize I needed to look more carefully after the first fix. When I tested the game and something still seemed wrong, I went back to Claude and it pointed out the TypeError block that had been missed. In that way, AI helped me understand that testing one part of the code isn't enough — you have to test the whole flow, not just the line you changed.
 ---
 
 ## 4. What did you learn about Streamlit and state?
 
 - In your own words, explain why the secret number kept changing in the original app.
+The secret number kept changing because there was a line that said random.randint() at the top so every button click would randomize the value making it impossible to get
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+Streamlit "reruns" are essentially re running the entire python script each time a change is made or a button is pressed. That's why session state is a key dictionary because that survives those reruns making it useable. 
 - What change did you make that finally gave the game a stable secret number?
-
+We put the random.randint() line of code in an if statement that way it was only called when needed, and not on every rerun.
 ---
 
 ## 5. Looking ahead: your developer habits

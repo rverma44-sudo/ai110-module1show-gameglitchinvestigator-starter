@@ -26,12 +26,14 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+The game's purpose is to use high/low hints in order to identify a random number in a given amount of chances. 
 - [ ] Detail which bugs you found.
 - [ ] Explain what fixes you applied.
 
 ## 📸 Demo
 
 - [ ] [Insert a screenshot of your fixed, winning game here]
+
 
 ## 🚀 Stretch Features
 
