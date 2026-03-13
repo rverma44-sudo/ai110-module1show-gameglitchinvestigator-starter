@@ -33,7 +33,7 @@ The game's purpose is to use high/low hints in order to identify a random number
 ## 📸 Demo
 
 - [ ] [Insert a screenshot of your fixed, winning game here]
-
+![alt text](image.png)
 
 ## 🚀 Stretch Features
 
