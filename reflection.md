@@ -49,5 +49,8 @@ We put the random.randint() line of code in an if statement that way it was only
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+  One habit I would love to develop through this project is ensuring my git pushes and commits are meaningful rather than too many for little reason or too little for large changes.
 - What is one thing you would do differently next time you work with AI on a coding task?
+Next time I work with AI, something I could do differently is be more specific with AI prompting, instead of asking what it thinks about a specific area, I could point to the lines I think the issue is at and go from there. 
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+Before this project, I assumed AI could fully create this guesser and decode it instantly but through this, I learned that it isn't that simple, and manual testing is key in order to create a fully functional application.
